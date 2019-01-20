@@ -66,3 +66,9 @@ pandoc test.md --filter mathjax-pandoc-filter --output test.html --to html5 --fr
 ```
 
 The images and style file are embedded in the HTML file.
+
+# References
+
+[](https://github.com/jgm/pandoc/issues/3153)
+
+[](https://github.com/jgm/pandoc-tex2svg)
