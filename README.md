@@ -13,6 +13,8 @@ Get an installer [here](https://github.com/jgm/pandoc/releases).
 
 ## MathJax javascript library
 
+Make sure to have [Node.js and NPM](https://nodejs.org/en/).
+
 Install a local copy of the [MathJax](https://www.mathjax.org) library.
 
 ```bash
