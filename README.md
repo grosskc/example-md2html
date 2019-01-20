@@ -56,7 +56,7 @@ $$f(x) = \int_{-\infty}^x e^{t} dt$$
 
 ![PNG Image](test.png)
 
-![SVG Image](test.png)
+![SVG Image](test.svg)
 ```
 
 Now compile it to a stand-alone HTML file using the AFIT.css file to style the HTML.
