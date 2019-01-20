@@ -7,6 +7,7 @@ date: 20-Jan-2019
 # Install dependencies
 
 ## Pandoc
+
 Read about [pandoc](https://pandoc.org).
 
 Get an installer [here](https://github.com/jgm/pandoc/releases).
@@ -66,6 +67,10 @@ pandoc test.md --filter mathjax-pandoc-filter --output test.html --to html5 --fr
 ```
 
 The images and style file are embedded in the HTML file.
+
+# A complete example
+
+See [here](./example/) for a complete working example.
 
 # References
 
