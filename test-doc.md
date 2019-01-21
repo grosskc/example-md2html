@@ -1,5 +1,5 @@
 ---
-title: Minimal working example
+title: Minimal working document
 author: Anonymous
 ---
 
