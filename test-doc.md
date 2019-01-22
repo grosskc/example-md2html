@@ -5,7 +5,26 @@ author: Anonymous
 
 # Heading
 
-Some text.
+Lorem ipsum dolor sit amet, mazim paulo assentior ius no, case cotidieque repudiandae ex sed. Munere nullam ei eum, fierent deleniti usu ut. Pro putant persius facilisi ea, nam ad aperiri consectetuer. At quem iusto mucius pro, eos in tantas adipisci. Eos mazim praesent eu, sea cu wisi insolens democritum. Veritus sapientem conclusionemque eam ne, ea ius dolores probatus recteque, ad nam amet enim nonumes.
+
+Now some python code:
+
+```python
+# Imports
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Define function
+def my_func(x):
+	return x**2
+x = np.random.randn(100)
+y = f(x)
+
+# Visualize
+plt.figure()
+plt.plot(x,y,'.')
+plt.show()
+```
 
 ## Sub-Heading
 
@@ -15,6 +34,6 @@ $$f(x) = \int_{-\infty}^x e^{t} dt$$
 
 ## Now some images
 
-![PNG Image](test.png)
+![This is the figure caption for the PNG image.](test.png){width=75%}
 
-![SVG Image](test.svg)
+![This is the figure caption for the SVG image.](test.svg){width=75%}

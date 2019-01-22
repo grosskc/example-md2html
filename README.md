@@ -84,7 +84,7 @@ Pandoc can use LaTeX to convert the Markdown document into a paginated PDF. You 
 
 Save the following markdown example as `test-doc.md`
 
-```
+```markdown
 ---
 title: Minimal working document
 author: Anonymous
@@ -92,7 +92,26 @@ author: Anonymous
 
 # Heading
 
-Some text.
+Lorem ipsum dolor sit amet, mazim paulo assentior ius no, case cotidieque repudiandae ex sed. Munere nullam ei eum, fierent deleniti usu ut. Pro putant persius facilisi ea, nam ad aperiri consectetuer. At quem iusto mucius pro, eos in tantas adipisci. Eos mazim praesent eu, sea cu wisi insolens democritum. Veritus sapientem conclusionemque eam ne, ea ius dolores probatus recteque, ad nam amet enim nonumes.
+
+Now some python code:
+
+    ```python
+    # Imports
+    import numpy as np
+    import matplotlib.pyplot as plt
+
+    # Define function
+    def my_func(x):
+    		return x**2
+    x = np.random.randn(100)
+    y = f(x)
+
+    # Visualize
+    plt.figure()
+    plt.plot(x,y,'.')
+    plt.show()
+    ```
 
 ## Sub-Heading
 
@@ -102,9 +121,9 @@ $$f(x) = \int_{-\infty}^x e^{t} dt$$
 
 ## Now some images
 
-![PNG Image](test.png)
+![This is the figure caption for the PNG image.](test.png){width=75%}
 
-![SVG Image](test.svg)
+![This is the figure caption for the SVG image.](test.svg){width=75%}
 ```
 
 Now compile it to a stand-alone HTML file using the nice.css file to style the HTML.
@@ -119,7 +138,7 @@ The images and style file are embedded in the HTML file, and should render nicel
 
 Save the following markdown example as `test-presentation.md`. Note I have added a theme `nice_reveal` in `reveal.js/css/theme/`.
 
-```
+```markdown
 ---
 title: Minimal working presentation
 author: Anonymous
@@ -164,6 +183,10 @@ decktape reveal --size 1024x768 --pause 50 test-presentation.html test-presentat
 ## More complete examples
 
 See [here](./example/) for more thorough examples. I've also included the shell scripts I use to automate converting MD to HTML. Note that they'll need to be modified to work on your system.
+
+# TODO
+- [ ] Add example .bib file and how to do a citation
+- [ ] Add header / footer to slides
 
 # Additional References
 
