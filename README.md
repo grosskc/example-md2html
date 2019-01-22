@@ -6,7 +6,9 @@ date: 20-Jan-2019
 
 # Summary
 
-Describes the necessary software packages and shell commands used to convert a [Markdown][1] document into a *stand-alone* HTML file or a stand-alone presentations. It is straightforward to use MathJax to render TeX math in HTML. However, in general, an internet connection (or a stand-alone installation of MathJax) is required for this to work. This presents a method to avoid this dependence. In short, the generated HTML file can be shared with anyone using a modern web browser.
+Describes the necessary software packages and shell commands used to convert a [Markdown][1] document into a *stand-alone* HTML file or a stand-alone presentations.
+
+It is straightforward to use MathJax to render TeX math in HTML. However, in general, an internet connection (or a stand-alone installation of MathJax) is required for this to work. This presents a method to avoid this dependence. In short, the generated HTML file can be shared with anyone using a modern web browser.
 
 You can learn more about [Markdown here][2] and obtain a useful [cheat-sheet here][3].
 
@@ -74,9 +76,24 @@ npm install -g decktape
 
 [dt]: https://github.com/astefanutti/decktape
 
-## LaTeX (Optional)
+## LaTeX and BibTeX (Optional)
 
 Pandoc can use LaTeX to convert the Markdown document into a paginated PDF. You can find links to get a LaTeX distribution [here](https://www.latex-project.org/get/#tex-distributions).
+
+There are several good reference managers that speak BibTeX, including [Zotero][z], [Mendeley][m], [JabRef][j], and [BibDesk][b] (macOS only).
+
+[z]: https://www.zotero.org
+[m]: https://www.mendeley.com/
+[j]: http://www.jabref.org
+[b]: https://bibdesk.sourceforge.io
+
+## Good text editor / IDE (optional)
+
+It helps to have a good text editor that understands Markdown, HTML, and can preview common image formats (e.g., PNG, GIF, PDF). Good examples include Microsoft's [Visual Studio Code][vsc] and GitHub's [Atom](https://atom.io). Both are free and have integrated terminals.
+
+![Screenshot of Atom being used to edit this document.](Editor.png)
+
+[vsc]: https://code.visualstudio.com
 
 # Minimal working examples
 
@@ -92,26 +109,26 @@ author: Anonymous
 
 # Heading
 
-Lorem ipsum dolor sit amet, mazim paulo assentior ius no, case cotidieque repudiandae ex sed. Munere nullam ei eum, fierent deleniti usu ut. Pro putant persius facilisi ea, nam ad aperiri consectetuer. At quem iusto mucius pro, eos in tantas adipisci. Eos mazim praesent eu, sea cu wisi insolens democritum. Veritus sapientem conclusionemque eam ne, ea ius dolores probatus recteque, ad nam amet enim nonumes.
+Lorem ipsum dolor sit amet, mazim paulo assentior ius no, case cotidieque repudiandae ex sed. Munere nullam ei eum, fierent deleniti usu ut. Pro putant persius facilisi ea, nam ad aperiri consectetuer. At quem iusto mucius pro, eos in tantas adipisci. Eos mazim praesent eu, sea cu wisi insolens democritum. Veritus sapientem conclusionemque eam ne, ea ius dolores probatus recteque, ad nam amet enim nonumes [@MartinJA-2017].
 
 Now some python code:
 
-    ```python
-    # Imports
-    import numpy as np
-    import matplotlib.pyplot as plt
+		```python
+		# Imports
+		import numpy as np
+		import matplotlib.pyplot as plt
 
-    # Define function
-    def my_func(x):
-    		return x**2
-    x = np.random.randn(100)
-    y = f(x)
+		# Define function
+		def my_func(x):
+			return x**2
+		x = np.random.randn(100)
+		y = f(x)
 
-    # Visualize
-    plt.figure()
-    plt.plot(x,y,'.')
-    plt.show()
-    ```
+		# Visualize
+		plt.figure()
+		plt.plot(x,y,'.')
+		plt.show()
+		```
 
 ## Sub-Heading
 
@@ -124,12 +141,16 @@ $$f(x) = \int_{-\infty}^x e^{t} dt$$
 ![This is the figure caption for the PNG image.](test.png){width=75%}
 
 ![This is the figure caption for the SVG image.](test.svg){width=75%}
+
+# References
+
 ```
 
-Now compile it to a stand-alone HTML file using the nice.css file to style the HTML.
+Now compile it to a stand-alone HTML file using the nice.css file to style the HTML. Note that the bibliography file `test.bib` is supplied, as is the citation format style `ieee.csl`.
 
 ```bash
-pandoc test-doc.md --filter mathjax-pandoc-filter --output test-doc.html --to html5 --from markdown --standalone --self-contained --css nice.css
+pandoc test-doc.md --filter pandoc-citeproc --csl ieee.csl --bibliography test.bib --filter mathjax-pandoc-filter --output test-doc.html --to html5 --from markdown --standalone --self-containe
+d --css nice.css
 ```
 
 The images and style file are embedded in the HTML file, and should render nicely in a modern web browser.
@@ -185,7 +206,7 @@ decktape reveal --size 1024x768 --pause 50 test-presentation.html test-presentat
 See [here](./example/) for more thorough examples. I've also included the shell scripts I use to automate converting MD to HTML. Note that they'll need to be modified to work on your system.
 
 # TODO
-- [ ] Add example .bib file and how to do a citation
+- [x] Add example .bib file and how to do a citation
 - [ ] Add header / footer to slides
 
 # Additional References

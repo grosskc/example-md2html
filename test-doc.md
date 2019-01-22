@@ -5,7 +5,7 @@ author: Anonymous
 
 # Heading
 
-Lorem ipsum dolor sit amet, mazim paulo assentior ius no, case cotidieque repudiandae ex sed. Munere nullam ei eum, fierent deleniti usu ut. Pro putant persius facilisi ea, nam ad aperiri consectetuer. At quem iusto mucius pro, eos in tantas adipisci. Eos mazim praesent eu, sea cu wisi insolens democritum. Veritus sapientem conclusionemque eam ne, ea ius dolores probatus recteque, ad nam amet enim nonumes.
+Lorem ipsum dolor sit amet, mazim paulo assentior ius no, case cotidieque repudiandae ex sed. Munere nullam ei eum, fierent deleniti usu ut. Pro putant persius facilisi ea, nam ad aperiri consectetuer. At quem iusto mucius pro, eos in tantas adipisci. Eos mazim praesent eu, sea cu wisi insolens democritum. Veritus sapientem conclusionemque eam ne, ea ius dolores probatus recteque, ad nam amet enim nonumes [@MartinJA-2017].
 
 Now some python code:
 
@@ -37,3 +37,5 @@ $$f(x) = \int_{-\infty}^x e^{t} dt$$
 ![This is the figure caption for the PNG image.](test.png){width=75%}
 
 ![This is the figure caption for the SVG image.](test.svg){width=75%}
+
+# References
