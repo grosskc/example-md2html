@@ -113,22 +113,22 @@ Lorem ipsum dolor sit amet, mazim paulo assentior ius no, case cotidieque repudi
 
 Now some python code:
 
-		```python
-		# Imports
-		import numpy as np
-		import matplotlib.pyplot as plt
+	```python
+	# Imports
+	import numpy as np
+	import matplotlib.pyplot as plt
 
-		# Define function
-		def my_func(x):
-			return x**2
-		x = np.random.randn(100)
-		y = f(x)
+	# Define function
+	def my_func(x):
+		return x**2
+	x = np.random.randn(100)
+	y = my_func(x)
 
-		# Visualize
-		plt.figure()
-		plt.plot(x,y,'.')
-		plt.show()
-		```
+	# Visualize
+	plt.figure()
+	plt.plot(x,y,'.')
+	plt.show()
+	```
 
 ## Sub-Heading
 

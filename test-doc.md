@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 def my_func(x):
 	return x**2
 x = np.random.randn(100)
-y = f(x)
+y = my_func(x)
 
 # Visualize
 plt.figure()
